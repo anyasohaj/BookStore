@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bagirapp.bookstore.EditorActivity"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/fab_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/product_name"
+        style="@style/editable_label"/>
+
+    <EditText
+        android:id="@+id/product_name"
+       style="@style/editText_style"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/price"
+        style="@style/editable_label"/>
+    <EditText
+        android:id="@+id/price"
+        style="@style/editText_style"
+        android:inputType="number"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/quantity"
+        style="@style/editable_label"/>
+    <EditText
+        android:id="@+id/quantity"
+        style="@style/editText_style"
+        android:inputType="number"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/supplier"
+        style="@style/editable_label"/>
+
+    <Spinner
+        android:id="@+id/supplier_name"
+        style="@style/editText_style"
+        android:spinnerMode="dropdown"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:text="@string/supplier_phone"
+            style="@style/editable_label"/>
+    <EditText
+        android:id="@+id/supplier_pone"
+        android:inputType="phone"
+        style="@style/editText_style"/>
+</LinearLayout>
+</LinearLayout>

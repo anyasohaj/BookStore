@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="suplier">
+        <item>@string/deputy</item>
+        <item>@string/alexandra</item>
+        <item>@string/bookline</item>
+        <item>@string/libri</item>
+    </string-array>
+</resources>
