@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Book Store</string>
     <string name="action_settings">Settings</string>
+    <string name="action_delete_all">Delete all items</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_order">Order</string>
+    <string name="editor_activity_title_new_book">Add a Book</string>
+    <string name="edit_book">Edit Book</string>
 
     <string name="bookline">Fred Bookline</string>
     <string name="alexandra">Alexandra Novel</string>
@@ -14,4 +19,21 @@
     <string name="supplier_phone">Supplier phone</string>
 
     <string name="action_save">Save</string>
+    <string name="delete_dialog_msg">Delete this book?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="editor_delete_book_successful">Book deleted</string>
+    <string name="editor_delete_book_failed">Error with deleting book</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="poduct_name_required">Product name is required</string>
+    <string name="price_required">Price is required</string>
+    <string name="quantity_required">Quantity is required</string>
+    <string name="sale_button">Sale</string>
+    <string name="run_out">This book is run out of stock</string>
+    <string name="zero">0</string>
+    <string name="empty_view_state">There\'s no data in the database</string>
+    <string name="empty_view_instruction">Add a new book to the database by clicking on \'plus\' button.</string>
+
     </resources>

@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<android.support.v7.widget.RecyclerView android:id="@+id/recyclerview"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-</android.support.v7.widget.RecyclerView>
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
+    <ListView
+        android:id="@+id/book_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/list_top_margin" />
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/empty_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/empty_view_state" />
+
+        <TextView
+            android:id="@+id/empty_list_insturction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_list"
+            android:layout_margin="@dimen/crease_button_size"
+            android:gravity="center"
+            android:text="@string/empty_view_instruction"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

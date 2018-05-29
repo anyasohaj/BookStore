@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/list_item"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/display_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/fab_margin"
         android:layout_centerVertical="true"
-        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/fab_margin"
         android:textSize="18sp"
-        tools:text="Bambi gyermekei"/>
+        android:textStyle="bold"
+        tools:text="Bambi gyermekei" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/fab_margin"
-        android:orientation="vertical"
-        android:layout_alignParentRight="true">
-    <TextView
-        android:id="@+id/display_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="3500.-"/>
-    <TextView
-        android:id="@+id/display_quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="34db"/>
+        android:layout_toLeftOf="@+id/sale_button"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/display_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="3500.-" />
+
+        <TextView
+            android:id="@+id/display_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="34db" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/sale_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:focusable="false"
+        android:text="@string/sale_button" />
 
 </RelativeLayout>

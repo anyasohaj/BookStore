@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_top_margin">56dp</dimen>
+    <dimen name="crease_button_size">48dp</dimen>
 </resources>

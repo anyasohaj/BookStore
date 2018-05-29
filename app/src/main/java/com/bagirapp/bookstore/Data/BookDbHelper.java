@@ -10,7 +10,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
 
     public BookDbHelper(Context context) {
-        super(context, DATABASE_NAME , null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
@@ -24,11 +24,9 @@ public class BookDbHelper extends SQLiteOpenHelper {
                 + BookStoreContract.BookEntry.COLUMN_SUPPLIER_PHONE + " TEXT " + ");";
 
         sqLiteDatabase.execSQL(SQL_CREATE_BOOKS_TABLE);
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
     }
 }
