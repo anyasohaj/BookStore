@@ -1,11 +1,14 @@
 package com.bagirapp.bookstore;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -208,8 +211,9 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         switch (item.getItemId()) {
             case R.id.action_save:
                 saveBook();
-                if (allRight){
-                finish();}
+                if (allRight) {
+                    finish();
+                }
                 return true;
 
             case android.R.id.home:
@@ -246,15 +250,15 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
         int quantityInt = Integer.parseInt(quantityString);
 
-        if (TextUtils.isEmpty(nameString)){
+        if (TextUtils.isEmpty(nameString)) {
             Toast.makeText(this, getString(R.string.poduct_name_required), Toast.LENGTH_LONG).show();
             return;
         }
-        if (TextUtils.isEmpty(priceString)){
+        if (TextUtils.isEmpty(priceString)) {
             Toast.makeText(this, getString(R.string.price_required), Toast.LENGTH_LONG).show();
             return;
         }
-        if (TextUtils.isEmpty(quantityString)){
+        if (TextUtils.isEmpty(quantityString)) {
             Toast.makeText(this, getString(R.string.quantity_required), Toast.LENGTH_LONG).show();
             return;
         }
@@ -263,7 +267,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         if (!TextUtils.isEmpty(phoneString)) {
             phone = phoneString;
         }
-
 
 
         ContentValues values = new ContentValues();
@@ -380,8 +383,13 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         Intent orderIntent = new Intent(Intent.ACTION_CALL);
         String phoneNumber = "tel:" + phone.getText().toString().trim();
         orderIntent.setData(Uri.parse(phoneNumber));
-        startActivity(orderIntent);
-    }
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+        Toast.makeText(this, "Something went wrong with permission", Toast.LENGTH_LONG).show();
+        return;
+        }
+        startActivity(orderIntent);
+
+    }
 
 }
